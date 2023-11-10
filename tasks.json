@@ -1,0 +1,21 @@
+//vscode task configuration to open and run batch script
+
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "deploy react gh pages.yml", //you can name this task anything you want
+      "type": "shell",
+      "command": "C:\\deploy_gh_p.bat", //the location of your task in your machine
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
