@@ -3,12 +3,13 @@
 </div>
 
 <div align="center">
-    <a href="https://www.youtube.com/watch?v=XhoWXhyuW_I">youtube video</a>
+    <h4>Follow the steps below to deploy your React application on GitHub.</h4>
+    <a href="https://www.youtube.com/watch?v=XhoWXhyuW_I">
+        <img src="https://img.shields.io/badge/Youtube_Video%20-%0A66C2.svg?&style=for-the-badge&logo=YouTube&logoColor=FF0000&color=282828" />
+    </a>
 </div>
 
-<br>
-
-### Follow the steps below on how to deploy a vite react app:
+<br />
 
 #### 01. Create a vite react app
 ```npm
@@ -25,12 +26,14 @@ git remote add origin https://github.com/[USER]/[REPO_NAME]
 git push -u origin main
 ```
 
-#### 03. Setup base on *vite.config*
+#### 03. Setup base in *vite.config*
 ```js
 base: "/[REPO_NAME]/"
 ```
 
 #### 04. Create ./github/workflows/deploy.yml and add the code bellow
+> [!WARNING]
+> It is crucial that the `.yml` file has the exact code below. Any typing or spacing errors may cause deployment issues.
 ```yml
 name: Deploy
 
@@ -85,24 +88,49 @@ jobs:
           publish_dir: ./dist
 ```
 
-#### 05. Push
+#### 05. Push to GitHub
 ```git
 git add . 
 git commit -m "add: deploy workflow" 
 git push
 ```
 
-#### 06. Active workflow
-```js
-Config -> Actions -> General -> Workflow permissions -> Read and Write permissions 
-Actions -> failed deploy -> re-run-job failed jobs 
-Pages -> gh-pages -> save
+#### 06. Active workflow (GitHub)
+```
+Config > Actions > General > Workflow permissions > Read and Write permissions 
+```
+```
+Actions > failed deploy > re-run-job failed jobs 
+```
+```
+Pages > gh-pages > save
 ```
 
-#### 06. For code changes
+## 🛠 Helper
+
+#### > For code changes
+Whenever you push to GitHub, it will deploy automatically.
 ```git
 git add . 
 git commit -m "fix: some bug" 
 git push
 ```
-Whenever you push to GitHub, it will deply automatically
+
+#### > Fixing the 404 page error on routes.
+Watch my video on YouTube or check my repository.
+
+<a href="https://youtu.be/uEEj2c3_ydg?si=XiUEL9h1WUmfjtkt">
+    <img src="https://img.shields.io/badge/Video%20-%0A66C2.svg?&style=for-the-badge&logo=YouTube&logoColor=FF0000&color=282828" />
+</a>
+<a href="https://github.com/ErickKS/vite-react-router">
+    <img src="https://img.shields.io/badge/Repository%20-%0A66C2.svg?&style=for-the-badge&logo=GitHub&logoColor=FFFFFF&color=282828" />
+</a>
+
+<br/>
+
+#### > Do you want to automate the project setup process ( `.yml` and `vite.config` )?
+To prevent possible errors in the deploy process, check out this pull request:
+
+<a href="https://github.com/ErickKS/vite-deploy/pull/1">
+    <img src="https://img.shields.io/badge/Pull_Request%20-%0A66C2.svg?&style=for-the-badge&logo=GitHub&logoColor=FFFFFF&color=282828" />
+</a>
