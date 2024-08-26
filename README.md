@@ -31,7 +31,7 @@ git push -u origin main
 base: "/[REPO_NAME]/"
 ```
 
-#### 04. Create ./github/workflows/deploy.yml and add the code bellow
+#### 04. Create /.github/workflows/deploy.yml and add the code below
 > [!WARNING]
 > It is crucial that the `.yml` file has the exact code below. Any typing or spacing errors may cause deployment issues.
 ```yml
