@@ -132,3 +132,10 @@ To prevent possible errors in the deploy process, check out this pull request:
 <a href="https://github.com/ErickKS/vite-deploy/pull/1">
     <img src="https://img.shields.io/badge/Pull_Request%20-%0A66C2.svg?&style=for-the-badge&logo=GitHub&logoColor=FFFFFF&color=282828" />
 </a>
+
+#### > Having trouble with [RollupError: Could not resolve](https://github.com/vitejs/vite/discussions/14237) issue?
+You may need to:
+* Fix the `import` statements as discussed [here](https://github.com/vitejs/vite/discussions/14237#discussioncomment-7148255), or
+* Update directory names as mentioned [here](https://github.com/vitejs/vite/discussions/14237#discussioncomment-7310639)
+
+Note: For the second case, make sure `git` picks up your capitalization changes via `git config core.ignorecase false` ([source](https://stackoverflow.com/a/31393409/23817375))
